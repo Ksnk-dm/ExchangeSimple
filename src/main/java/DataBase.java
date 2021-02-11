@@ -15,6 +15,7 @@ public class DataBase {
             String username = property.getProperty("db.login");
             String password = property.getProperty("db.password");
             fis.close();
+            isr.close();
             return DriverManager.getConnection(url, username, password);
         }
     }
