@@ -13,7 +13,7 @@
     <p><input type="submit" value="загрузить в бд"></p>
 </form>
 Очистка бд
-<form action="/indexServlet" method="post">
+<form action="/DelServlet" method="get">
     <p><input type="submit" value="очистить базу"></p>
 </form>
 

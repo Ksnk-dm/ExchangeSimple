@@ -5,7 +5,7 @@ import java.io.IOException;
 
 
 @WebServlet(name = "infoExchangeServlet ", value = "/infoExchangeServlet")
-public class infoExchangeServlet extends HttpServlet {
+public class InfoExchangeServlet extends HttpServlet {
 
 
     @Override

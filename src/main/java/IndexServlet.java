@@ -30,11 +30,6 @@ public class IndexServlet extends HttpServlet {
         getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
     }
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, IllegalArgumentException, SecurityException {
-        DataBase.delDB();
-        getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
-
-    }
 }
 
 
