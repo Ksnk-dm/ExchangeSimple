@@ -20,7 +20,7 @@
 <p>Результат добавления: ${result}</p>
 <p>Максимальный курс за период: ${max}</p>
 <p>Средний курс за период: ${avg}</p>
-
+<p>Валюта: ${a} </p>
 
 Выберите валюту:
 <form action="/infoExchangeServlet" method="post" name="form1">

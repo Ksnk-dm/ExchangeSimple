@@ -82,8 +82,7 @@ public class DataBase {
                 ps.setString(1, name);
                 ResultSet resultSet = ps.executeQuery();
                 resultSet.next();
-                String s = resultSet.getString(1);
-                return s;
+                return resultSet.getString(1);
             }
         } catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException | ClassNotFoundException | SQLException | IOException e) {
             e.printStackTrace();

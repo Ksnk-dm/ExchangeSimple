@@ -14,6 +14,7 @@ String a = request.getParameter("list");
         try {
             String text= DataBase.Max(a);
             String text1=DataBase.Avg(a);
+            request.setAttribute("a",a);
             request.setAttribute("max",text);
             request.setAttribute("avg",text1);
             getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
