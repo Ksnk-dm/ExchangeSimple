@@ -9,17 +9,9 @@ public class DataBase {
     static {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
-        } catch (InstantiationException e) {
+        } catch (InstantiationException |IllegalAccessException |InvocationTargetException | NoSuchMethodException|ClassNotFoundException  e) {
             e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
+        } 
 
     }
 
