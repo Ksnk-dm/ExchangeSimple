@@ -8,6 +8,7 @@ import javax.servlet.annotation.*;
 @WebServlet(name = "indexServlet", value = "/indexServlet")
 public class IndexServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+     DataBase dataBase = new DataBase();
         for (int i = 1; i <= 10; i++) { //понимаю что не совсем корректно, та и нагрузка большая на бд
             URL url = new URL("https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?date=202101" + i + "&json");
             try (BufferedReader in = new BufferedReader(
@@ -21,7 +22,7 @@ public class IndexServlet extends HttpServlet {
                     String cc = user.getCc();
                     String exchangedate = user.getExchangedate();
                     Exchange newCurs = new Exchange(r030, txt, rate, cc, exchangedate);
-                    DataBase.Insert(newCurs);
+                    dataBase.insert(newCurs);
                 }
 
             }

@@ -7,7 +7,8 @@ import java.io.IOException;
 public class DelServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        DataBase.delDB();
+        DataBase dataBase = new DataBase();
+        dataBase.delDb();
         getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
     }
 

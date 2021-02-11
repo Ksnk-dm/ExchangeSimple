@@ -25,10 +25,10 @@
 Выберите валюту:
 <form action="/infoExchangeServlet" method="post" name="form1">
     <p><select name="list">
-        <option>USD</option>
-        <option>EUR</option>
-        <option>RUB</option>
-        <option>AUD</option>
+        <option value="USD">Доллар</option>
+        <option value="EUR">Євро</option>
+        <option value="RUB">Російський рубль</option>
+        <option value="AUD">Австралійський долар</option>
         <option>CAD</option>
         <option>CNY</option>
         <option>HRK</option>
@@ -37,6 +37,7 @@
         <option>HKD</option>
         <option>HUF</option>
         <option>INR</option>
+        <option></option>
 
     </select></p>
     <p><input type="submit" value="Отправить"></p>

@@ -10,10 +10,11 @@ public class InfoExchangeServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) {
+        DataBase dataBase = new DataBase();
 String a = request.getParameter("list");
         try {
-            String text= DataBase.Max(a);
-            String text1=DataBase.Avg(a);
+            String text= dataBase.max(a);
+            String text1=dataBase.avg(a);
             request.setAttribute("a",a);
             request.setAttribute("max",text);
             request.setAttribute("avg",text1);
